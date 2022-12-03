@@ -13,7 +13,7 @@ public class ArbolAvl {
 	}
 	
 	public void agregarNodo(int valor) {
-		NodoAvl nuevo = new NodoAvl(valor);
+		NodoAvl nuevo = new NodoAvl(valor,this);
         agregarNodo(nuevo);
 	}
 	
