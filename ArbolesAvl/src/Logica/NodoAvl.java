@@ -27,7 +27,6 @@ public class NodoAvl {
 			if(this.hijos.get(1)!=null) {
 				(this.hijos.get(1)).agregarNodo(nodo);
 			}else {
-				System.out.println("----------------------------------");
 				nodo.padre = this;
 				this.hijos.set(1, nodo);
 			}
@@ -35,7 +34,6 @@ public class NodoAvl {
 			if(this.hijos.get(0)!=null) {
 				(this.hijos.get(0)).agregarNodo(nodo);
 			}else {
-				System.out.println("----------------------------------");
 				nodo.padre = this; 
 				this.hijos.set(0, nodo);
 			}
@@ -83,28 +81,7 @@ public class NodoAvl {
 		}
 	}
 	
-	/*
-	 * public void revisarAlturas() {
-	 * 
-	 * System.out.println("revisando altura de el nodo: "+ String.valueOf(valor));
-	 * System.out.println("balance: "+String.valueOf(balance));
-	 * System.out.println("altura: "+String.valueOf(altura));
-	 * 
-	 * if(this.hijos.get(0) != null) { hijos.get(0).revisarAlturas(); }
-	 * if(this.hijos.get(1) != null) { hijos.get(1).revisarAlturas(); } int izq =
-	 * hijos.get(0) == null ? 0 : hijos.get(0).altura; int der = hijos.get(1) ==
-	 * null ? 0 : hijos.get(1).altura;
-	 * 
-	 * int max = Math.max(izq,der); altura = max + 1;
-	 * 
-	 * balance = der - izq;
-	 * 
-	 * System.out.println("despues el nodo: "+ String.valueOf(valor));
-	 * System.out.println("balance: "+String.valueOf(balance));
-	 * System.out.println("altura: "+String.valueOf(altura));
-	 * 
-	 * }
-	 */
+	
 	public void rotacionIzquierda() {
 		if(padre == null) {
 			arbol.raiz = hijos.get(1);
